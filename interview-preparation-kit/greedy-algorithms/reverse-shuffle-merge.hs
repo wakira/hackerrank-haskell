@@ -45,7 +45,7 @@ reverseShuffleMerge a =
           (sAfter, ocrAfter) = tryReplace x s cr ocr
         in
           go xs (x:sAfter) (use x cr) (use x ocrAfter)
-      | otherwise = -- search down the stack until not replacable
+      | otherwise =
          go xs (x:s) (use x cr) (use x ocr)
 
   in
