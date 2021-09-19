@@ -40,8 +40,6 @@ reverseShuffleMerge a =
         go xs s (use x cr) ocr
       | null s || x >= head s =
         go xs (x:s) (use x cr) (use x ocr)
-      | cr ! head s == 0 = -- cannot replace TODO: merge with tryReplace
-        go xs (x:s) (use x cr) (use x ocr)
       | x < head s && cr ! head s >= ocr ! head s + 1 =
         let
           (sAfter, ocrAfter) = tryReplace x s cr ocr
