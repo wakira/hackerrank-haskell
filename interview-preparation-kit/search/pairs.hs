@@ -16,8 +16,8 @@ import System.IO
 --
 
 pairs k arr =
-  go Map.empty arr 0
   -- Write your code here
+  go Map.empty arr 0
   where
     go _ [] cnt = cnt
     go m (x:xs) cnt =
